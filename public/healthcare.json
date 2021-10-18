@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Eye Care",
+    "price": 355,
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "img": "https://preview.colorlib.com/theme/docmed/img/department/x1.png.pagespeed.ic.x3qDs-wH_Z.webp"
+  },
+  {
+    "id": 2,
+    "name": "Physical Therapy",
+    "price": 999,
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "img": "https://preview.colorlib.com/theme/docmed/img/department/x2.png.pagespeed.ic.uaL3VgmWbh.webp"
+  },
+  {
+    "id": 3,
+    "name": "Dental Care",
+    "price": 500,
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "img": "https://preview.colorlib.com/theme/docmed/img/department/x3.png.pagespeed.ic.zpAN733a8c.webp"
+  },
+  {
+    "id": 4,
+    "name": "Diagnostic Test",
+    "price": 355,
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "img": "https://preview.colorlib.com/theme/docmed/img/department/x4.png.pagespeed.ic.28IHJtAY2d.webp"
+  },
+  {
+    "id": 5,
+    "name": "Skin Surgery",
+    "price": 345,
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "img": "https://preview.colorlib.com/theme/docmed/img/department/x5.png.pagespeed.ic.AJvtqHVhNN.webp"
+  },
+  {
+    "id": 6,
+    "name": "Surgery Service",
+    "price": 777,
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "img": "https://preview.colorlib.com/theme/docmed/img/department/x6.png.pagespeed.ic.H_Jz9l-DBS.webp"
+  }
+]

@@ -1,11 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useFirebase from '../../../hooks/useFirebase';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import firebaseAuthInit from '../../../Firebase/firebase.init';
+import { Link } from 'react-router-dom';
+firebaseAuthInit();
 
 const Login = () => {
 
-    const {loginWithGoogle , user} = useFirebase();
+    
 
-    console.log(user);
+    const {loginWithGoogle , setUser , auth } = useFirebase();
+
+    //set email and password
+    const [email , setEmail] = useState('');
+    const [password , setPassword] = useState('');
+
+    //get form email
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+    //get form password
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
+    //login with email and password
+    const handleLoginWithEmail = (e) => {
+
+        e.preventDefault();
+
+        console.log(email , password);
+
+        signInWithEmailAndPassword(auth , email , password)
+        .then( result => {
+            console.log(result.user);
+            setUser(result.user);
+        })
+
+    }
+
+    
 
     return (
         <div className="container my-5">
@@ -15,9 +49,9 @@ const Login = () => {
                          <img src={'https://i.ibb.co/TKkZsvQ/download.webp'} className="img-fluid" alt="" />
                     </div>
 
-                    <form className="mt-3">
-                        <input type="text" className="form-control py-2" placeholder="Email" /> <br />
-                        <input type="text" className="form-control py-2" placeholder="Password" /> <br />
+                    <form onSubmit={handleLoginWithEmail} className="mt-3">
+                        <input onBlur={handleEmail} type="text" className="form-control py-2" placeholder="Email" /> <br />
+                        <input onBlur={handlePassword} type="text" className="form-control py-2" placeholder="Password" /> <br />
                         <input type="submit" value="Log In" className="form-control btn btn-danger py-2"  />
                     </form>
                     <div className="py-3">
@@ -27,7 +61,9 @@ const Login = () => {
                         <button onClick={loginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
                     </div>
                     <div className="pt-3">
-                        <p className="text-danger fw-bold text-center">Want Create Account?</p>
+                        <Link to="/register">
+                            <p className="text-danger fw-bold text-center">Want Create Account?</p>
+                        </Link>
                     </div>
                 </div>
             </div>

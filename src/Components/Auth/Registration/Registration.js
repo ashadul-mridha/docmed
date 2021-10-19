@@ -1,6 +1,9 @@
 import React from 'react';
+import useFirebase from '../../../hooks/useFirebase';
 
 const Registration = () => {
+
+    const {loginWithGoogle} = useFirebase();
     return (
         <div className="container my-5">
             <div className="row justify-content-center">
@@ -18,7 +21,7 @@ const Registration = () => {
                         <h3 className="text-warning text-center">OR</h3>
                     </div>
                     <div className="pb-3">
-                        <button className="btn btn-warning w-100"> <i class="fab fa-google"></i> Log In With Google</button>
+                        <button onClick={loginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
                     </div>
                     <div className="pt-3">
                         <p className="text-danger fw-bold text-center">Already Have Account?</p>

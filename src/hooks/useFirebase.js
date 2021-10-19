@@ -11,7 +11,7 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
 
     const [user , setUser] = useState({});
-    const [isLoading , setIsLoading] = useState(false);
+    const [isLoading , setIsLoading] = useState(true);
 
     const loginWithGoogle = () => {
         setIsLoading(true);
@@ -19,12 +19,15 @@ const useFirebase = () => {
         .then(result => {
             setUser(result.user);
             console.log(result.user);
-        })
-        setIsLoading(false);
+        }).finally(
+            () => {
+                setIsLoading(false);
+            }
+        )
+        
     }
 
     useEffect( () => {
-        setIsLoading(true);
         onAuthStateChanged(auth , (user) => {
             if(user){
                 setUser(user);
@@ -33,15 +36,18 @@ const useFirebase = () => {
             }
         })
         setIsLoading(false);
-    },[]);
+    }, []);
 
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
         .then( () => {
             setUser({});
-        })
-        setIsLoading(false);
+        }).finally(
+            () => {
+                setIsLoading(false);
+            }
+        )
     }
 
     return {

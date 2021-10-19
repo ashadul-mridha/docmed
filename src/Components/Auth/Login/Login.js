@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import firebaseAuthInit from '../../../Firebase/firebase.init';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ const Login = () => {
 
     
 
-    const {loginWithGoogle , setUser , auth } = useFirebase();
+    const {loginWithGoogle , setUser , auth } = useAuth();
 
     //set email and password
     const [email , setEmail] = useState('');

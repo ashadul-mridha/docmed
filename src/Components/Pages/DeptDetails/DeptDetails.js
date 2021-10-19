@@ -33,7 +33,7 @@ const DeptDetails = () => {
                     <h1>{dept?.name}</h1>
                     <h3 className="text-danger">Cost : ${dept?.price}</h3>
                     <p>{dept?.desc}</p>
-                    <button className="btn btn-danger"><i class="fas fa-procedures"></i> Appoinment</button>
+                    <button className="btn btn-danger"><i className="fas fa-procedures"></i> Appoinment</button>
                 </div>
                 <div className="col-md-5">
                     <img src={dept?.img} className="img-fluid" alt="" />

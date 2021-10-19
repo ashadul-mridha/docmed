@@ -14,13 +14,15 @@ import Footer from './Components/Shared/Footer/Footer';
 import DeptDetails from './Components/Pages/DeptDetails/DeptDetails';
 import Login from './Components/Auth/Login/Login';
 import Registration from './Components/Auth/Registration/Registration';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AuthProvider from './Context/AuthProvider';
 
 
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
-            <Header></Header>
+        <Header></Header>
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -37,9 +39,9 @@ function App() {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
-          <Route path="/appoinment/:deptId">
+          <PrivateRoute path="/appoinment/:deptId">
             <DeptDetails></DeptDetails>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -52,7 +54,7 @@ function App() {
         </Switch>
             <Footer></Footer>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 

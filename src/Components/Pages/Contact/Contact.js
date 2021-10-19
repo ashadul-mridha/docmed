@@ -1,8 +1,11 @@
 import React from 'react';
 import { Col, Container, Row , Button } from 'react-bootstrap';
+import useFirebase from '../../../hooks/useFirebase';
 import contactImg from '../../../images/contact.jpg';
 
 const Contact = () => {
+    const {user} = useFirebase();
+    console.log(user);
     return (
         <div className="contact-us">
             <Container>

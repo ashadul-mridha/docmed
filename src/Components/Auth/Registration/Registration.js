@@ -2,12 +2,12 @@ import { createUserWithEmailAndPassword  } from '@firebase/auth';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import firebaseAuthInit from '../../../Firebase/firebase.init';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 firebaseAuthInit();
 
 const Registration = () => {
 
-    const {loginWithGoogle , auth } = useFirebase();
+    const {loginWithGoogle , auth  } = useAuth();
 
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
@@ -22,14 +22,11 @@ const Registration = () => {
 
     const registerWithEmail = (e) => {
 
-        
-        // e.preventdefault();
-
-        // console.log(email, password);
+        e.preventDefault();
 
         createUserWithEmailAndPassword(auth , email , password)
         .then( result => {
-            console.log(result.user);
+            
         })
 
         

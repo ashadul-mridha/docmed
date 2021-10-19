@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="row">
                 <div className="col-md-5 col-sm-12 align-self-center mb-2">
                     <img src={'https://i.ibb.co/TKkZsvQ/download.webp'} alt="" />
-                    <p className="text-white fs-5 py-3">Firmament morning sixth subdue darkness creeping gathered divide.</p>
+                    <p className="text-white fs-5 py-3">Health Care For Hole Family</p>
                     <div>
                         <Link className="p-2  text-white me-2" to={'fb.com'}><i className="fab fa-facebook-f fa-2x"></i></Link>
                         <Link className="p-2  text-white me-2" to={'fb.com'}><i className="fab fa-instagram fa-2x"></i></Link>

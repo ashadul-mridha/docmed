@@ -9,10 +9,10 @@ const Appoinment = () => {
                     <div className="row align-items-center">
                         <div className="col-7">
                             <h3 className="text-white">For Any Emergency Contact</h3>
-                            <p className="text-white">Esteem spirit temper too say adieus.</p>
+                            <p className="text-white">If You Need Emergency Service Call this Num.</p>
                         </div>
                         <div className="col-5">
-                            <button className="btn btn-outline-info">171863735347</button>
+                            <button className="btn btn-outline-info"><i className="fas fa-phone"></i> 171863735347</button>
                         </div>
                     </div>
                 </div>
@@ -20,10 +20,10 @@ const Appoinment = () => {
                     <div className="row align-items-center">
                         <div className="col-7">
                             <h3 className="text-white">Make an Online Appointment</h3>
-                            <p className="text-white">Esteem spirit temper too say adieus.</p>
+                            <p className="text-white">Make Online Appoinment We Will Response Soon.</p>
                         </div>
                         <div className="col-5">
-                            <button className="btn btn-outline-info">Make An Appoinment </button>
+                            <button className="btn btn-outline-info"><i className="fas fa-hospital-user"></i> Make An Appoinment </button>
                         </div>
                     </div>
                 </div>

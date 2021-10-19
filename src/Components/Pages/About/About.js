@@ -17,7 +17,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} md={7}>
                         <h2>The world’s Best Hospital </h2>
-                        <p>Millions of people have used Kingster to decide which online course to take. We aggregate courses from many universities to help you find the best courses on almost any subject, wherever they exist. Our goal is to make online education work for everyone</p>
+                        <p className="fs-5">For over three decades, we have specialised in specific areas of medicine - mental health, orthopaedics, neurology, surgery and general medicine. This approach has given us an in-depth understanding of specific disorders and their treatments, enabling us to focus on providing the best treatment options and care for our patients. Each year, our 10,500 employees treat and care for around 320,000 patients at currently 26 locations in Asia And Europe</p>
                         <Link to="/services">
                             <Button variant="primary">Appoinment</Button>
                         </Link>
@@ -26,8 +26,8 @@ const About = () => {
                 {/* become instuctor */}
                 <Row className=" py-5">
                     <Col xs={12} md={6}>
-                        <h2 className="fw-bold">Become an Doctore</h2>
-                        <p className="fs-4">The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people</p>
+                        <h2 className="fw-bold">How Become an Doctore</h2>
+                        <p className="fs-4">Developing the skills and knowledge necessary to practice medicine requires a great deal of time and effort, so it is important to research the training process before taking the plunge. The following section outlines how physicians prepare for their careers.</p>
                         <Button variant="primary" className="me-2">Become a Doctore</Button>
                         <Button variant="danger">Watch Video </Button>
                     </Col>

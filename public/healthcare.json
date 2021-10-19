@@ -3,42 +3,42 @@
     "id": 1,
     "name": "Eye Care",
     "price": 355,
-    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "desc": "Eye care is the provision of appropriate, accessible, and affordable care that meets patients' eye care needs in a comprehensive and competent manner. Primary eye care provides the patient with the first contact for eye care as well as a care.",
     "img": "https://preview.colorlib.com/theme/docmed/img/department/x1.png.pagespeed.ic.x3qDs-wH_Z.webp"
   },
   {
     "id": 2,
     "name": "Physical Therapy",
     "price": 999,
-    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "desc": "Doctor might suggest this type of treatment if you've had an injury or illness that makes it hard to do daily tasks. Physical therapy (PT) is care that aims to ease pain and help you function, move, and live better. You may need it to: Relieve pain.",
     "img": "https://preview.colorlib.com/theme/docmed/img/department/x2.png.pagespeed.ic.uaL3VgmWbh.webp"
   },
   {
     "id": 3,
     "name": "Dental Care",
     "price": 500,
-    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "desc": "Dental care is the maintenance of healthy teeth and may refer to: Oral hygiene, the practice of keeping the mouth and teeth clean in order to prevent dental disorders. Dentistry, the professional care of teeth, including professional oral hygiene and dental surgery.",
     "img": "https://preview.colorlib.com/theme/docmed/img/department/x3.png.pagespeed.ic.zpAN733a8c.webp"
   },
   {
     "id": 4,
     "name": "Diagnostic Test",
     "price": 355,
-    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "desc": "A diagnostic procedure is an examination to identify an individual's specific areas of weakness and strength in order determine a condition, disease or illness. For example Cat , MRI , City Scan to determine if the herniated disc is impinging on a nerve root.",
     "img": "https://preview.colorlib.com/theme/docmed/img/department/x4.png.pagespeed.ic.28IHJtAY2d.webp"
   },
   {
     "id": 5,
     "name": "Skin Surgery",
     "price": 345,
-    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "desc": "Skin surgery is routinely performed by dermatologists and plastic surgeons, mostly using local anaesthesia. Types of skin surgery include: Skin biopsy (punch biopsy, shave biopsy, incisional biopsy and excision biopsy) Electrosurgery.",
     "img": "https://preview.colorlib.com/theme/docmed/img/department/x5.png.pagespeed.ic.AJvtqHVhNN.webp"
   },
   {
     "id": 6,
     "name": "Surgery Service",
     "price": 777,
-    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It \thas roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+    "desc": "Any service in a hospital or medical centre that is procedure- or intervention-based, or supports surgical specialties. Anaesthesiology, cardiovascular surgery, ENT, general surgery, OB/GYN, orthopaedics, pathology, podiatry, radiology.",
     "img": "https://preview.colorlib.com/theme/docmed/img/department/x6.png.pagespeed.ic.H_Jz9l-DBS.webp"
   }
 ]

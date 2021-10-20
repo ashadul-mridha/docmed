@@ -22,7 +22,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
 
-    const redirect_url = location.state?.form || '/';
+    const redirect_url = location.state?.from || '/';
 
     //login USing google and redirect 
 
@@ -59,17 +59,19 @@ const Login = () => {
 
         e.preventDefault();
 
-        console.log(email , password);
+        console.log(email , password , location);
 
         signInWithEmailAndPassword(auth , email , password)
         .then( result => {
-            console.log(result.user);
             setUser(result.user);
-        })
+            history.push(redirect_url);
+        }).catch(
+            (error) => {
+                setErrorMessage(error.message);
+            }
+        )
 
     }
-
-    
 
     return (
         <div className="container my-5">

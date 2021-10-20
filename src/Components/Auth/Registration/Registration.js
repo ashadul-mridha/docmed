@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword  } from '@firebase/auth';
+import { createUserWithEmailAndPassword , updateProfile  } from '@firebase/auth';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import firebaseAuthInit from '../../../Firebase/firebase.init';
@@ -9,9 +9,10 @@ const Registration = () => {
 
     const {loginWithGoogle , auth , setUser , setIsLoading  } = useAuth();
 
-    //set email and pw
+    //set email and pw and name
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
+    const [name , setName] = useState('');
 
     //set error message 
     const [errorMessage , setErrorMessage] = useState('');
@@ -36,6 +37,10 @@ const Registration = () => {
         setPassword(e.target.value);
     }
 
+    const handleName = (e) => {
+        setName(e.target.value);
+    }
+
     const registerWithEmail = (e) => {
 
         e.preventDefault();
@@ -43,9 +48,21 @@ const Registration = () => {
         createUserWithEmailAndPassword(auth , email , password)
         .then( result => {
             setUser({});
+            updateName();
+        }).catch( (error) => {
+            setErrorMessage(error.message);
         })
 
-        
+    }
+    
+    const updateName = () => {
+        updateProfile(auth.currentUser , {
+            displayName: name
+        }).then( () => {
+
+        }).catch( (error) => {
+            setErrorMessage(error.message);
+        })
     }
 
     return (
@@ -57,6 +74,7 @@ const Registration = () => {
                     </div>
 
                     <form onSubmit={registerWithEmail} className="mt-3">
+                        <input onBlur={handleName} type="text" className="form-control py-2" placeholder="Name" /> <br />
                         <input onBlur={handleEmail} type="text" className="form-control py-2" placeholder="Email" /> <br />
                         <input onBlur={handlePassword} type="text" className="form-control py-2" placeholder="Password" /> <br />
                         <input type="submit" value="Register" className="form-control btn btn-danger py-2"  />

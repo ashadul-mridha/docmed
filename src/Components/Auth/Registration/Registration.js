@@ -7,7 +7,7 @@ firebaseAuthInit();
 
 const Registration = () => {
 
-    const {loginWithGoogle , auth  } = useAuth();
+    const {loginWithGoogle , auth , setUser  } = useAuth();
 
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
@@ -26,7 +26,7 @@ const Registration = () => {
 
         createUserWithEmailAndPassword(auth , email , password)
         .then( result => {
-            
+            setUser({});
         })
 
         

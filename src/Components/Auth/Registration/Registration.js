@@ -7,10 +7,26 @@ firebaseAuthInit();
 
 const Registration = () => {
 
-    const {loginWithGoogle , auth , setUser  } = useAuth();
+    const {loginWithGoogle , auth , setUser , setIsLoading  } = useAuth();
 
+    //set email and pw
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
+
+    //set error message 
+    const [errorMessage , setErrorMessage] = useState('');
+
+    //login with google
+    const handleLoginWithGoogle = () => {
+        loginWithGoogle()
+        .catch( (error) => {
+            setErrorMessage(error.message);
+        }).finally(
+            () => {
+                setIsLoading(false);
+            }
+        )
+    }
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -49,7 +65,10 @@ const Registration = () => {
                         <h3 className="text-warning text-center">OR</h3>
                     </div>
                     <div className="pb-3">
-                        <button onClick={loginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
+                        <button onClick={handleLoginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
+                    </div>
+                    <div className="py-2">
+                        <p className="text-danger">{errorMessage}</p>
                     </div>
                     <div className="pt-3">
                         <Link to="/login">

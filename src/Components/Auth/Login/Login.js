@@ -15,6 +15,9 @@ const Login = () => {
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
 
+    //catch error message
+    const [errorMessage , setErrorMessage] = useState('');
+
     //redirect url found
     const location = useLocation();
     const history = useHistory();
@@ -30,7 +33,11 @@ const Login = () => {
             setUser(result.user);
             history.push(redirect_url);
             console.log(result.user);
-        }).finally(
+        }).catch(
+            (error) => {
+                setErrorMessage(error.message);
+            }
+        ).finally(
             () => {
                 setIsLoading(false);
             }
@@ -82,6 +89,9 @@ const Login = () => {
                     </div>
                     <div className="pb-3">
                         <button onClick={handleLoginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
+                    </div>
+                    <div className="pb-3">
+                        <p className="text-danger">{errorMessage}</p>
                     </div>
                     <div className="pt-3">
                         <Link to="/register">

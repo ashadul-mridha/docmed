@@ -2,18 +2,41 @@ import React, { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import firebaseAuthInit from '../../../Firebase/firebase.init';
-import { Link } from 'react-router-dom';
+import { Link , useHistory , useLocation } from 'react-router-dom';
 firebaseAuthInit();
 
 const Login = () => {
 
     
 
-    const {loginWithGoogle , setUser , auth } = useAuth();
+    const {loginWithGoogle , setUser , auth, setIsLoading } = useAuth();
 
     //set email and password
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
+
+    //redirect url found
+    const location = useLocation();
+    const history = useHistory();
+
+    const redirect_url = location.state?.form || '/';
+
+    //login USing google and redirect 
+
+    const handleLoginWithGoogle = () => {
+
+        loginWithGoogle()
+        .then(result => {
+            setUser(result.user);
+            history.push(redirect_url);
+            console.log(result.user);
+        }).finally(
+            () => {
+                setIsLoading(false);
+            }
+        )
+    }
+
 
     //get form email
     const handleEmail = (e) => {
@@ -58,7 +81,7 @@ const Login = () => {
                         <h3 className="text-warning text-center">OR</h3>
                     </div>
                     <div className="pb-3">
-                        <button onClick={loginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
+                        <button onClick={handleLoginWithGoogle} className="btn btn-warning w-100"> <i className="fab fa-google"></i> Log In With Google</button>
                     </div>
                     <div className="pt-3">
                         <Link to="/register">
